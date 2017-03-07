@@ -15,6 +15,36 @@ params:
   sample_ID: NA
   barcode_ID: NA
 ---
+<!-- color the active TOC element purple -->
+<style>
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: indigo;
+}
+</style>
+
+<!-- color the active pill buttons purple with white text -->
+
+<style>
+    .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+        color: white;
+        background-color: indigo;
+}
+        .nav-pills > li.active > a:hover {
+            background-color: indigo;
+            color:white;
+        }
+
+</style>
+
+<!-- color the inactive pill button text purple -->
+
+<style>
+
+.nav>li>a {
+    color: indigo;
+    background-color: lightgray;
+}
+</style>
 
 ```{r setup, include=FALSE}
 # {.tabset} # .tabset-fade .tabset-pills
