@@ -1,7 +1,4 @@
 ---
-title: "Gene Panel Analysis Report"
-author: "Stephen Kelly"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
   html_document:
     keep_md: yes
@@ -15,35 +12,48 @@ params:
   sample_ID: NA
   barcode_ID: NA
 ---
-<!-- color the active TOC element purple -->
+<div class="fluid-row" id="header">
+<h1 class="title toc-ignore">Gene Panel Analysis Report</h1>
+<h4 class="author" style="display: inline; float: left;"><em>Stephen Kelly</em></h4>
+<h4 class="date" style=" inline; float: right;"><em>`r format(Sys.time(), '%B %d, %Y')`</em></h4>
+</div>
+<br>
+<hr class="section-rule">
+
 <style>
+/* custom line between sections */
+.section-rule {
+color: lightgray;
+}
+
+/* color the active TOC element purple */
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     background-color: indigo;
 }
-</style>
 
-<!-- color the active pill buttons purple with white text -->
-
-<style>
-    .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-        color: white;
-        background-color: indigo;
+#header h1 {
+    color: purple;
+    border-bottom: 1px solid purple;
+    padding-bottom: 15px;
 }
-        .nav-pills > li.active > a:hover {
-            background-color: indigo;
-            color:white;
-        }
+/* color the active pill buttons purple with white text */
 
-</style>
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+color: white;
+background-color: indigo;
+}
+/* color the inactive pill button text purple */
 
-<!-- color the inactive pill button text purple -->
-
-<style>
+.nav-pills > li.active > a:hover {
+background-color: indigo;
+color:white;
+}
 
 .nav>li>a {
-    color: indigo;
-    background-color: lightgray;
+color: indigo;
+background-color: lightgray;
 }
+
 </style>
 
 ```{r setup, include=FALSE}
